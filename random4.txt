@@ -1,0 +1,12 @@
+a=$((($RANDOM%10:99)))
+echo Dice1 $a
+b=$((($RANDOM%10:99)))
+echo Dice2 $b
+c=$((($RANDOM%10:99)))
+echo Dice2 $c
+d=$((($RANDOM%10:99)))
+echo Dice2 $d
+e=$((($RANDOM%10:99)))
+echo Dice2 $e
+sum= $[$a + $b + $c + $d + $e]
+echo Sum is $sum 
