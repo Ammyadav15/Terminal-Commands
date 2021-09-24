@@ -1,12 +1,14 @@
-a=$((($RANDOM%10:99)))
-echo Dice1 $a
-b=$((($RANDOM%10:99)))
-echo Dice2 $b
-c=$((($RANDOM%10:99)))
-echo Dice2 $c
-d=$((($RANDOM%10:99)))
-echo Dice2 $d
-e=$((($RANDOM%10:99)))
-echo Dice2 $e
-sum= $[$a + $b + $c + $d + $e]
-echo Sum is $sum 
+declare -a aa
+n=5;
+avg=0;
+sum=0;
+
+for((i=0; $i<$n; i=$(($i+1))))
+do
+aa[$i]=$((($RANDOM%90)+10))
+echo $((aa[$i]))
+sum=$(($sum+$((aa[$i]))))
+done
+avg=$(($sum/n))
+echo $sum
+echo $avg
